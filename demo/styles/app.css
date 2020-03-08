@@ -1,0 +1,62 @@
+.app-loading {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 1;
+    visibility: visible;
+    transition: 300ms all linear 0ms;
+}
+.app-loading.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+.app-loading .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    color: #87ceeb;
+    font-size: 16px;
+}
+.app-loading .progress-bar-wrapper {
+    position: relative;
+    display: block;
+    height: 2em;
+    line-height: 2;
+    width: 100%;
+    background-color: #809495;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+}
+.app-loading .progress-bar-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 96%;
+    height: 0;
+    transform: translate(-50%, -50%);
+    border-top: 8px dashed #fff;
+}
+.app-loading .progress-bar {
+    position: relative;
+    display: block;
+    width: 0;
+    height: 100%;
+    transition: 800ms all linear 0ms;
+    background-color: #f0ad4e;
+    border-radius: 10px;
+}
+.app-loading .progress-bar .fa-chrome {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #000;
+}
