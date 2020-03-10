@@ -60,9 +60,13 @@ new Vue({
         rotateX: 0,
         rotateY: 0,
         rotateZ: 0,
-        planes: utils.range(6).map(() => utils.range(4)), // 六面体的六个面，每个面有4个方形
+        planes: utils.range(6), // 六面体的六个面
     },
-    watch: {},
+    watch: {
+        hideLoading (newVal, oldVal) {
+            console.log(`修改了this.hideLoading的值，修改后为${newVal}，修改前为${oldVal}`)
+        }
+    },
     methods: {
         startAutoRotate (e) {
             const width = parseInt(getComputedStyle(e.target).width, 10)
@@ -177,5 +181,8 @@ new Vue({
                 this.hideLoading = true
             }, 800)
         }
+    },
+    beforeDestroy () {
+        // 如果是多页应用的话，可以在离开当前视图时进行一些处理，如页面性能上报、销毁定时器等操作
     },
 })
