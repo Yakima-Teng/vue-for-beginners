@@ -7,9 +7,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="./styles/app.css">
-    <style>
-        .slider-3d-js {}
-    </style>
 </head>
 <body>
 <div id="app">
@@ -26,15 +23,11 @@
         <div class="slider">
             <!-- stage for 六面体整体 -->
             <div class="stage-whole">
-                <ul class="container-whole">
-                    <li class="stage-cover">
-                        <ul class="container-cover">
-                            <li class="stage-pic">
-                                <div class="container-pic">
-                                    <img src="" alt="" class="img">
-                                </div>
-                            </li>
-                        </ul>
+                <ul ref="elemContainerWhole" :style="{ transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)` }" class="container-whole">
+                    <li v-for="(plane, planeIdx) in planes" :key="planeIdx" class="stage-cover">
+                        <div @mouseenter="startAutoRotate" @mouseleave="stopAutoRotate" class="container-cover">
+                            {{['正','右', '后', '左', '上', '下'][planeIdx]}}
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -43,15 +36,18 @@
             <ul class="ul">
                 <li class="li">
                     <label for="rotateX" class="label">RotateX</label>
-                    <input model="rotateX" type="number" id="rotateX" class="input" />
+                    <input v-model="rotateX" type="number" id="rotateX" class="input" />
                 </li>
                 <li class="li">
-                    <label for="rotateY" class="label">RotateX</label>
-                    <input model="rotateY" type="number" id="rotateY" class="input" />
+                    <label for="rotateY" class="label">RotateY</label>
+                    <input v-model="rotateY" type="number" id="rotateY" class="input" />
                 </li>
                 <li class="li">
-                    <label for="rotateZ" class="label">RotateX</label>
-                    <input model="rotateZ" type="number" id="rotateZ" class="input" />
+                    <label for="rotateZ" class="label">RotateZ</label>
+                    <input v-model="rotateZ" type="number" id="rotateZ" class="input" />
+                </li>
+                <li class="li">
+                    <span @mouseenter="startRandomPlay" @mouseleave="stopRandomPlay" class="btnRandom">鼠标别放这里</span>
                 </li>
             </ul>
         </aside>
