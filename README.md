@@ -1,13 +1,12 @@
 # Vue入门介绍
 
-![](./attachment/divination.jpeg)
+![](./attachment/cube.jpg)
 
 > 各位好，这是一份Vue入门材料，如有勘误请直接提交issue。
 
 ## 学习目的
 
-1. 了解Vue的常见用法（为了保持纯粹，在这里不会涉及webpack）。
-2. 科学地减少bug！！！
+1. 了解Vue的常见用法。
 
 ## 基本介绍
 
