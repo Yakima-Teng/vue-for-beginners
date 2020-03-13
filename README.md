@@ -28,7 +28,7 @@ Demo示意图如下：
 
 1. 与React的componentDidMount、componentWillUnmount类似，Vue有对应的mounted、beforeDestroy等组件生命周期上的钩子。
 2. 在Vue中，可通过@click、@mouseenter这样的属性来进行***事件绑定***。
-3. Vue可以通过给input、textarea等表单元素添加v-model属性实现数据的双向绑定，在书写上比React方便很多。
+3. Vue可以通过给input、textarea等表单元素添加v-model属性实现***数据的双向绑定***，在书写上比React方便很多。
 
 ## 写在最后
 
