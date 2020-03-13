@@ -1,6 +1,6 @@
 # Vue入门介绍
 
-![](./attachment/cube.jpg)
+![cube](./attachment/cube.jpg)
 
 > 各位好，这是一份Vue入门材料，如有勘误请直接提交issue。
 
@@ -18,7 +18,11 @@ Vue是一个由***数据驱动***视图的库，与以前开发者直接通过�
 
 ## 项目示例
 
-详见demo目录中的代码。Demo示意视频见attachment/demo.mp4文件。
+详见demo目录中的代码。<del>Demo示意视频见attachment/demo.mp4文件。（视频一放，仓库下载速度实在感人，还是删了）</del>
+
+Demo示意图如下：
+
+![snapshot](./attachment/snapshot.png)
 
 ## 写在最后
 
